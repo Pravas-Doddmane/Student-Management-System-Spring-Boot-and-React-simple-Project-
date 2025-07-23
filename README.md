@@ -16,7 +16,7 @@ StudentManagementApplication.java
 Once started, the backend will run on:
 👉 http://localhost:8080/students
 
-3. Access the Database:
+2. Access the Database:
 
 H2 Console is available at:
 👉 http://localhost:8080/h2-console
