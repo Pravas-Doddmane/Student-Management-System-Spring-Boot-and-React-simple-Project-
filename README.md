@@ -31,13 +31,7 @@ A simple Student Management System project built using:
 
 - **To view student records**, run this SQL query:
 
-```sql
-SELECT * FROM STUDENT;```sql
-
-
-
-
-
+SELECT * FROM STUDENT;
 🔧 You can change the database settings in:
 backend/studentManagement/src/main/resources/application.properties
 
