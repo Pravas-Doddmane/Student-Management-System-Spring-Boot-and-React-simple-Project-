@@ -60,10 +60,9 @@ Each student record contains:
    spring.datasource.url=jdbc:postgresql://localhost:5432/database_name
    spring.datasource.username=postgres
    spring.datasource.password=your_password
-
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
-spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+   spring.jpa.hibernate.ddl-auto=update
+   spring.jpa.show-sql=true
+   spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
 
 6. Run:
    ```bash
