@@ -1,40 +1,28 @@
 package com.PassFamilyDoddmane.studentManagement.service;
 
 import com.PassFamilyDoddmane.studentManagement.model.Student;
-import com.PassFamilyDoddmane.studentManagement.repository.StudentRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 import java.util.List;
-import java.util.Optional;
 
-@Component
-public class StudentService {
-    @Autowired
-    private StudentRepository studentRepository;
+public interface StudentService {
 
-    public List<Student> getAllStudents(){
-        return studentRepository.findAll();
-    }
-    public Optional<Student> getStudentById(Long id){
-        return studentRepository.findById(id);
-    }
-    public Student saveStudent(Student student) {
-        return studentRepository.save(student);
-    }
+    Student createStudent(Student student);
 
-    public Student updateStudent(Long id, Student updatedStudent) {
-        return studentRepository.findById(id)
-                .map(student -> {
-                    student.setName(updatedStudent.getName());
-                    student.setEmail(updatedStudent.getEmail());
-                    student.setCourse(updatedStudent.getCourse());
-                    return studentRepository.save(student);
-                }).orElse(null);
-    }
+    Student getStudentById(Long id);
 
-    public void deleteStudent(Long id) {
-        studentRepository.deleteById(id);
-    }
+    Page<Student> getAllStudents(Pageable pageable);
 
+    Page<Student> searchStudents(String keyword, Pageable pageable);
+
+    List<Student> getStudentsByCourse(String course);
+
+    List<Student> getStudentsByDepartment(String department);
+
+    Student updateStudent(Long id, Student studentDetails);
+
+    void deleteStudent(Long id);
+
+    boolean emailExists(String email);
 }
