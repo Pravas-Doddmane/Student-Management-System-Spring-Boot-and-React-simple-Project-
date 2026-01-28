@@ -48,27 +48,6 @@ Each student record contains:
 - Enrollment Year  
 
 ---
-## 📂 Project Structure
-studentManagement/
-├── controller/
-│   └── StudentController.java
-├── dto/
-│   ├── StudentDTO.java
-│   └── ErrorResponse.java
-├── entity/
-│   └── Student.java
-├── exception/
-│   ├── StudentNotFoundException.java
-│   ├── GlobalExceptionHandler.java
-│   └── ValidationException.java
-├── repository/
-│   └── StudentRepository.java
-└── service/
-    ├── StudentService.java
-    └── impl/
-        └── StudentServiceImpl.java
----
-
 ## 🚀 Getting Started
 
 ### ▶️ Run the Backend
