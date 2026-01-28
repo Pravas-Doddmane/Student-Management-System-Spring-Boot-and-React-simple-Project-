@@ -56,10 +56,10 @@ Each student record contains:
 2. Open the backend project in IntelliJ 
 3. Configure PostgreSQL (see below)
 4. Update application.properties:
-5.   
-spring.datasource.url=jdbc:postgresql://localhost:5432/database_name
-spring.datasource.username=postgres
-spring.datasource.password=your_password
+   ```bash
+   spring.datasource.url=jdbc:postgresql://localhost:5432/database_name
+   spring.datasource.username=postgres
+   spring.datasource.password=your_password
 
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
